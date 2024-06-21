@@ -23,9 +23,14 @@ public class UserService {
 	public User insert(User obj) {
 		return repository.save(obj);//metodo save ja retorna objeto salvo
 	}
-	
+
+	public void delete(Long id) {
+		repository.deleteById(id);
+	}
+
 	public User findById(Long id) {
 		Optional<User> obj = repository.findById(id);
 		return obj.get();
 	}
+	
 }
