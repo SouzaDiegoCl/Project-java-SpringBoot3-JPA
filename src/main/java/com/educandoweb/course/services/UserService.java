@@ -20,6 +20,10 @@ public class UserService {
 		return repository.findAll();
 	}
 	
+	public User insert(User obj) {
+		return repository.save(obj);//metodo save ja retorna objeto salvo
+	}
+	
 	public User findById(Long id) {
 		Optional<User> obj = repository.findById(id);
 		return obj.get();
