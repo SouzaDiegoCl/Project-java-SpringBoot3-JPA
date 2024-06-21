@@ -33,4 +33,16 @@ public class UserService {
 		return obj.get();
 	}
 	
+	public User update (Long id, User obj) {
+		User entity = repository.getReferenceById(id);//Prepara objeto monitorado sem operar com banco de dados
+		updateData(entity, obj);
+		return repository.save(entity);
+	}
+
+	private void updateData(User entity, User obj) {
+		entity.setName(obj.getEmail());
+		entity.setName(obj.getName());
+		entity.setPhone(obj.getPhone());
+	}
+	
 }
