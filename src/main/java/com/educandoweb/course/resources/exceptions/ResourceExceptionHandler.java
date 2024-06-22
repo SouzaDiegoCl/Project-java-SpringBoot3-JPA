@@ -15,7 +15,7 @@ import jakarta.servlet.http.HttpServletRequest;
 @ControllerAdvice //Intercepta excecoes que acontecerem para esse objeto executar tratamento
 public class ResourceExceptionHandler {
 
-	@ExceptionHandler(ResourceNotFoundException.class)//Intercpta qualquer excecao desse tipo e executa o tratamento da func
+	@ExceptionHandler(ResourceNotFoundException.class)//Intercepta qualquer excecao desse tipo e executa o tratamento da func
 	public ResponseEntity<StandardError> resourceNotFound(ResourceNotFoundException e, HttpServletRequest request){
 		String error = "Resource Not Found";
 		HttpStatus status = HttpStatus.NOT_FOUND;
