@@ -33,7 +33,7 @@ public class UserResource {
 		return ResponseEntity.ok().body(list);
 		// .ok para retornar a resposta com sucesso no http e o .body retornar o User 'u' no corpo 	
 	}
-	
+	 
 	@GetMapping(value = "/{id}")
 	public ResponseEntity<User> findById(@PathVariable Long id){
 		User obj = service.findById(id);
