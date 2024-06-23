@@ -10,41 +10,61 @@ Esse projeto foi feito com base nas aulas do curso do professor [Nélio Alves](h
 - Também coloquei em prática conceitos de <b>programação orientada a objetos</b> e exercitei meus conhecimentos da linguagem <b>Java</b>.
 - Ao final do projeto fui ensinado sobre como fazer deploy da aplicação pelo <b>Heroku</b> e aproveitei para aprender também sobre <b>AWS</b> 
 </br>
-A aplicação consiste em um CRUD acessado por endpoints que permitem criar, visualizar, atualizar e deletar entidades do banco de dados local.
+A aplicação consiste em um CRUD relacionado a entidade <b>user</b> do banco de dados local.
 
 ## Endpoints
 
 ### POST  /users
-```bash 
+Inserção de um User
 
+<div align="center">
+ 
+![Endpoint Get](https://github.com/SouzaDiegoCl/workshop-springboot3-jpa/blob/main/assets/endpoint_users_post.png) 
 
+</div>
 
-```
+<hr>
 
-### GET  /users/{/id}
-```bash 
+### GET  /users
 
+Acesso ao arrays de objetos User
+<div align="center">
+ 
+![Endpoint Get](https://github.com/SouzaDiegoCl/workshop-springboot3-jpa/blob/main/assets/endpoint_users_get.png) 
 
+</div>
 
-```
+<hr>
 
 ### PUT  /users/{/id}
-```bash 
+Update de um User existente
+<div align="center">
+ 
+![Endpoint Update](https://github.com/SouzaDiegoCl/workshop-springboot3-jpa/blob/main/assets/endpoint_users_update.png) 
 
+</div>
 
-
-```
+<hr>
 
 ### DELETE  /users/{/id}
-```bash 
+Deletar User existente
+<div align="center">
+ 
+![Endpoint Delete](https://github.com/SouzaDiegoCl/workshop-springboot3-jpa/blob/main/assets/endpoint_users_delete.png) 
 
+</div>
 
-
-```
-
+<hr>
 
 ## Modelo conceitual
-<!-- ![Modelo Conceitual](https://github.com/acenelio/assets/raw/main/sds1/modelo-conceitual.png) -->
+Modelo conceitual apresentado pelo professor para execução do projeto
+<div align="center">
+ 
+![Modelo Conceitual](https://github.com/SouzaDiegoCl/workshop-springboot3-jpa/blob/main/assets/modelo_conceitual.png) 
+
+</div>
+
+<hr>
 
 # Tecnologias utilizadas
 ## Back end
@@ -53,7 +73,7 @@ A aplicação consiste em um CRUD acessado por endpoints que permitem criar, vis
 - JPA / Hibernate
 - Maven
 
-## Implantação em produção
+## Implantação em produção (Teste para aprendizado)
 - AWS Cloud - EC2
 
 
@@ -71,6 +91,9 @@ cd workshop-springboot3-jpa
 
 # executar o projeto
 ./mvnw spring-boot:run
+
+# acessar local database:
+localhost:8080/users
 ```
 
 # Autor
