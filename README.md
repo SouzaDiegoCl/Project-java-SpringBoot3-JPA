@@ -17,6 +17,10 @@ A aplicação consiste em um CRUD relacionado a entidade <b>user</b> do banco de
 ### POST  /users
 Inserção de um User
 
+Parametro:
+- Body: Objeto User 
+
+
 <div align="center">
  
 ![Endpoint Get](https://github.com/SouzaDiegoCl/workshop-springboot3-jpa/blob/main/assets/endpoint_users_post.png) 
@@ -38,6 +42,12 @@ Acesso ao arrays de objetos User
 
 ### PUT  /users/{/id}
 Update de um User existente
+
+
+Parametro:
+- Id do User
+- Body: Objeto User
+
 <div align="center">
  
 ![Endpoint Update](https://github.com/SouzaDiegoCl/workshop-springboot3-jpa/blob/main/assets/endpoint_users_update.png) 
