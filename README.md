@@ -83,7 +83,8 @@ Modelo conceitual apresentado pelo professor para execução do projeto
 - JPA / Hibernate
 - Maven
 
-## Implantação em produção (Teste para aprendizado)
+## Implantação em produção (Teste para aprendizado em duas plataformas)
+- Heroku
 - AWS Cloud - EC2
 
 
