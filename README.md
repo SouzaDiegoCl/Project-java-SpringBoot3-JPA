@@ -40,7 +40,7 @@ Acesso ao arrays de objetos User
 
 <hr>
 
-### PUT  /users/{/id}
+### PUT  /users/{id}
 Update de um User existente
 
 
@@ -56,7 +56,7 @@ Parametro:
 
 <hr>
 
-### DELETE  /users/{/id}
+### DELETE  /users/{id}
 Deletar User existente
 <div align="center">
  
