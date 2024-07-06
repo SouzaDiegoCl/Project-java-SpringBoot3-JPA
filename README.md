@@ -40,7 +40,7 @@ Acesso ao arrays de objetos User
 
 <hr>
 
-### PUT  /users/{/id}
+### PUT  /users/{id}
 Update de um User existente
 
 
@@ -56,7 +56,7 @@ Parametro:
 
 <hr>
 
-### DELETE  /users/{/id}
+### DELETE  /users/{id}
 Deletar User existente
 <div align="center">
  
@@ -83,7 +83,8 @@ Modelo conceitual apresentado pelo professor para execução do projeto
 - JPA / Hibernate
 - Maven
 
-## Implantação em produção (Teste para aprendizado)
+## Implantação em produção (Teste para aprendizado em duas plataformas)
+- Heroku
 - AWS Cloud - EC2
 
 
