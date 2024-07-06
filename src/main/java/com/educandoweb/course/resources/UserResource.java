@@ -18,54 +18,47 @@ import org.springframework.web.servlet.support.ServletUriComponentsBuilder;
 import com.educandoweb.course.entities.User;
 import com.educandoweb.course.services.UserService;
 
-
 @RestController
 @RequestMapping(value = "/users")
 public class UserResource {
-
-	@Autowired //Resource dependendo do services
+	@Autowired 
 	private UserService service;
-	
-	//Controlador Rest que responde no caminho /users 
+
 	@GetMapping
-	public ResponseEntity<List<User>> findAll(){
-		 List<User> list = service.findAll();
-		return ResponseEntity.ok().body(list);
-		// .ok para retornar a resposta com sucesso no http e o .body retornar o User 'u' no corpo 	
+	public ResponseEntity<List<User>> findAll() {
+		List<User> list = service.findAll();
+		return ResponseEntity.ok().body(list);	
 	}
-	 
+
 	@GetMapping(value = "/{id}")
-	public ResponseEntity<User> findById(@PathVariable Long id){
+	public ResponseEntity<User> findById(@PathVariable Long id) {
 		User obj = service.findById(id);
 		return ResponseEntity.ok().body(obj);
 	}
-	
-	@PostMapping //anotation para pre processamento definindo que esse metodo recebe o post
-	public ResponseEntity<User> insert(@RequestBody User obj){
+
+	@PostMapping 
+	public ResponseEntity<User> insert(@RequestBody User obj) {
 		obj = service.insert(obj);
-		
-		URI uri = ServletUriComponentsBuilder.fromCurrentRequest().path("/{id}")
-				.buildAndExpand(obj.getId()).toUri();
+
+		URI uri = ServletUriComponentsBuilder.fromCurrentRequest().path("/{id}").buildAndExpand(obj.getId()).toUri();
 		return ResponseEntity.created(uri).body(obj);
-		
+
 	}
-	
+
 	@DeleteMapping(value = "/{id}")
-	public ResponseEntity<Void> delete(@PathVariable Long id){
+	public ResponseEntity<Void> delete(@PathVariable Long id) {
 		service.delete(id);
 		return ResponseEntity.noContent().build();
 	}
-	
+
 	@PutMapping(value = "/{id}")
-	public ResponseEntity<User> update(@PathVariable Long id, @RequestBody User obj){
+	public ResponseEntity<User> update(@PathVariable Long id, @RequestBody User obj) {
 		obj = service.update(id, obj);
 		return ResponseEntity.ok().body(obj);
 	}
-	
-	
+
 	public String postMethodName(@RequestBody String entity) {
-		//TODO: process POST request
+		// TODO: process POST request
 		return entity;
 	}
-	
 }
