@@ -2,7 +2,7 @@
 
 # Sobre o projeto
 
-Esse projeto foi feito com base nas aulas do curso do professor [Nélio Alves](https://github.com/acenelio "Perfil do Nélio Alves no github") em seu curso da Udemy <b>Java COMPLETO Programação Orientada a Objetos + Projetos</b>.</br>
+ Esse projeto foi feito com base nas aulas do curso do professor [Nélio Alves](https://github.com/acenelio "Perfil do Nélio Alves no github") em seu curso da Udemy <b>Java COMPLETO Programação Orientada a Objetos + Projetos</b>.</br>
 
 
 - Durante as aulas aprendi sobre o uso do framework <b>Spring Boot</b> integrado com <b>JPA</b> implementado por <b>Hibernate</b>. 
@@ -15,7 +15,7 @@ A aplicação consiste em um CRUD relacionado a entidade <b>user</b> do banco de
 ## Endpoints
 
 ### POST  /users
-Inserção de um User
+    Inserção de um User
 
 Parametro:
 - Body: Objeto User 
@@ -31,7 +31,7 @@ Parametro:
 
 ### GET  /users
 
-Acesso ao arrays de objetos User
+    Acesso ao arrays de objetos User
 <div align="center">
  
 ![Endpoint Get](https://github.com/SouzaDiegoCl/workshop-springboot3-jpa/blob/main/assets/endpoint_users_get.png) 
@@ -41,7 +41,7 @@ Acesso ao arrays de objetos User
 <hr>
 
 ### PUT  /users/{id}
-Update de um User existente
+    Update de um User existente
 
 
 Parametro:
@@ -57,7 +57,7 @@ Parametro:
 <hr>
 
 ### DELETE  /users/{id}
-Deletar User existente
+    Deletar User existente
 <div align="center">
  
 ![Endpoint Delete](https://github.com/SouzaDiegoCl/workshop-springboot3-jpa/blob/main/assets/endpoint_users_delete.png) 
